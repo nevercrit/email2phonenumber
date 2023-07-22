@@ -1,3 +1,5 @@
+***update fyp.ebay.com to a different address. The former threw errors.
+
 # email2phonenumber
 email2phonenumber is an OSINT tool that allows you to obtain a target's phone number just by having his email address.
 
