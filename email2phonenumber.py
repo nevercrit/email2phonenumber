@@ -623,7 +623,7 @@ def scrape_ebay(email):
     proxy = random.choice(proxyList) if proxyList else None
     session = requests.Session()
     response = session.get(
-        "https://fyp.ebay.com/EnterUserInfo?ru=https%3A%2F%2Fwww.ebay.com%2F&gchru=&clientapptype=19&rmvhdr=false",
+        "https://www.ebay.com/EnterUserInfo?ru=https%3A%2F%2Fwww.ebay.com%2F&gchru=&clientapptype=19&rmvhdr=false",
         headers={
             "Upgrade-Insecure-Requests": "1",
             "User-Agent": user_agent,
@@ -645,10 +645,10 @@ def scrape_ebay(email):
         return
 
     response = session.post(
-        "https://fyp.ebay.com/EnterUserInfo?ru=https%3A%2F%2Fwww.ebay.com%2F&gchru=&clientapptype=19&rmvhdr=false",
+        "https://www.ebay.com/EnterUserInfo?ru=https%3A%2F%2Fwww.ebay.com%2F&gchru=&clientapptype=19&rmvhdr=false",
         headers={
             "Cache-Control": "max-age=0",
-            "Origin": "https://fyp.ebay.com",
+            "Origin": "https://www.ebay.com",
             "Upgrade-Insecure-Requests": "1",
             "Content-Type": "application/x-www-form-urlencoded",
             "User-Agent": user_agent,
@@ -656,7 +656,7 @@ def scrape_ebay(email):
             "text/html,application/xhtml+xml,application/xml;q=0.9,"
             "image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
             "Referer":
-            "https://fyp.ebay.com/EnterUserInfo?ru=https%3A%2F%2Fwww.ebay.com%2F&clientapptype=19&signInUrl="
+            "https://www.ebay.com/EnterUserInfo?ru=https%3A%2F%2Fwww.ebay.com%2F&gchru=&clientapptype=19&rmvhdr=false"
             "https%3A%2F%2Fwww.ebay.com%2Fsignin%3Ffyp%3Dsgn%26siteid%3D0%26co_partnerId%3D0%26ru%3Dhttps%25"
                             "3A%252F%252Fwww.ebay.com%252F&otpFyp=1",
             "Accept-Encoding": "gzip, deflate",
